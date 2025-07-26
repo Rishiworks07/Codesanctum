@@ -42,9 +42,10 @@ const Layout = () => {
         <Route path="/login" element={<Login />} />
 
         {/* Protected Routes */}
-        <Route path="/home" element={isLoggedIn ? <Home /> : <Navigate to="/login" />} />
-        <Route path="/dsa" element={isLoggedIn ? <DSA /> : <Navigate to="/login" />} />
-        <Route path="/editior/:id" element={isLoggedIn ? <Editor /> : <Navigate to="/login" />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/dsa" element={<DSA />} />
+        <Route path="/editior/:id" element={<Editor />} />
+
 
         {/* 404 Page */}
         <Route path="*" element={<NoPage />} />
